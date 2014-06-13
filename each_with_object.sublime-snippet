@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[each_with_object(${1:object}) {|${2:item}, ${3:buffer}| $0 }]]></content>
+    <tabTrigger>eawo</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>each_with_object(&block)</description>
+</snippet>

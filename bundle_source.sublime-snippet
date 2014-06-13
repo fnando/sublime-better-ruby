@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+source '${1:https://rubygems.org}'
+]]></content>
+  <tabTrigger>sour</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

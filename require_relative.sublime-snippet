@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+require_relative '$0'
+]]></content>
+  <tabTrigger>rr</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

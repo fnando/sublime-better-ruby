@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+File.expand_path('../$0', __FILE__)
+]]></content>
+  <tabTrigger>fep</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[JSON.dump(${1:object}${2:, ${3:io}})]]></content>
+    <tabTrigger>jd</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>JSON.dump(*args)</description>
+</snippet>

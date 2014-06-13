@@ -1,5 +1,9 @@
 <snippet>
-    <content><![CDATA[scan(/${1:pattern}/) { |${2:match}| $0 }]]></content>
+<content><![CDATA[
+scan(/${1:pattern}/) do |${2:match}|
+  $0
+end
+]]></content>
     <tabTrigger>sca</tabTrigger>
     <scope>source.ruby</scope>
     <description>scan(/../) { |match| .. }</description>
