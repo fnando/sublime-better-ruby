@@ -1,0 +1,15 @@
+%YAML 1.2
+---
+name: Puma
+file_extensions:
+  - puma.rb
+first_line_match: ^#!/.*\bruby
+scope: source.ruby.test
+contexts:
+  main:
+      # https://github.com/puma/puma/blob/master/lib/puma/dsl.rb
+    - include: 'scope:source.ruby'
+    - match: \b(activate_control_app|after_worker_boot|app|before_fork|bind|clean_thread_locals|daemonize|directory|drain_on_shutdown|environment|lowlevel_error_handler|on_restart|on_worker_boot|on_worker_fork|on_worker_shutdown|pidfile|port|prune_bundler|queue_requests|quiet|rackup|restart_command|shutdown_debug|ssl_bind|state_path|stdout_redirect|tag|tcp_mode|threads|worker_shutdown_timeout|worker_timeout|workers)\b
+      scope: support.function.ruby.puma
+    - match: \bpreload_app!(\s|$)
+      scope: support.function.ruby.puma

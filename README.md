@@ -14,6 +14,13 @@
     },
 
     {
+      "syntax": "Better Ruby/Puma",
+      "rules": [
+        {"file_path": ".*(\\\\|/)puma\\.rb$"}
+      ]
+    },
+
+    {
       "syntax": "Better Ruby/Ruby Test",
       "rules": [
         {"file_path": ".*_test\\.rb$"}
