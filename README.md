@@ -1,4 +1,18 @@
-# ApplySyntax configuration
+# Better Ruby
+
+This is a custom Ruby package, that includes snippets, custom syntax highlighters and more!
+
+## Install
+
+First of all, add this custom repository: <https://gist.github.com/fnando/56393d3900af55bf9e94>; just follow the instructions.
+
+Then, disable the built-in `Ruby` package using Package Control.
+
+Finally, install the `Better Ruby` package. Also, install the [ApplySyntax](https://github.com/facelessuser/ApplySyntax) package and use the following settings.
+
+By the way, there is a [Better Rails](https://github.com/fnando/better-rails-for-sublime-text) package as well.
+
+## ApplySyntax configuration
 
 ```json
 {
