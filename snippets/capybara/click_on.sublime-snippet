@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[click_on ${1:t('${2:scope}')}]]></content>
+    <tabTrigger>clic</tabTrigger>
+    <scope>meta.rails.integration_test</scope>
+    <description>click_on (capybara)</description>
+</snippet>

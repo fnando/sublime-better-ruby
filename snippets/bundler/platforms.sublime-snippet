@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+platforms :${1:ruby} do
+  $0
+end
+]]></content>
+  <tabTrigger>plat</tabTrigger>
+  <scope>source.ruby.bundler</scope>
+</snippet>

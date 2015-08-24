@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+install_if -> { ${1:condition} } do
+  $0
+end
+]]></content>
+  <tabTrigger>inst</tabTrigger>
+  <scope>source.ruby.bundler</scope>
+</snippet>

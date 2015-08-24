@@ -4,5 +4,5 @@ YAML.load_file('$0')
 ]]></content>
     <tabTrigger>ylf</tabTrigger>
     <scope>source.ruby</scope>
-    <description>YAML.load(file)</description>
+    <description>YAML.load_file(file)</description>
 </snippet>

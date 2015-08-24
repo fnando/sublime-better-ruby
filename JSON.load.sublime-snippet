@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[JSON.load(${1:string})]]></content>
+    <tabTrigger>jl</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>JSON.load(*args)</description>
+</snippet>

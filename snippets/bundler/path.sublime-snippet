@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+path ${1:'${2:path}'} do
+  $0
+end
+]]></content>
+  <tabTrigger>path</tabTrigger>
+  <scope>source.ruby.bundler</scope>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[refute_match /${1:expected_pattern}/, ${0:actual_string}]]></content>
+    <tabTrigger>rsm</tabTrigger>
+    <scope>meta.ruby.test_case.test</scope>
+    <description>refute_match(..)</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[assert page.has_css?('${1:selector}')]]></content>
+    <tabTrigger>phc</tabTrigger>
+    <scope>meta.rails.integration_test</scope>
+    <description>page.has_css? (capybara)</description>
+</snippet>

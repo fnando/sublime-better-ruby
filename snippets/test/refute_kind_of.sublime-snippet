@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[refute_kind_of ${1:ExpectedKind}, ${0:actual_instance}]]></content>
+    <tabTrigger>rsko</tabTrigger>
+    <scope>meta.ruby.test_case.test</scope>
+    <description>refute_kind_of(..)</description>
+</snippet>

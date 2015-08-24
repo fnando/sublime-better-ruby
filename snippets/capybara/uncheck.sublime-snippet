@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[uncheck ${1:t('${2:scope}')}]]></content>
+    <tabTrigger>uncheck</tabTrigger>
+    <scope>meta.rails.integration_test</scope>
+    <description>uncheck (capybara)</description>
+</snippet>

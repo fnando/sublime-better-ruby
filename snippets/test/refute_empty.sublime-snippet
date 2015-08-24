@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[refute_empty ${1:object}]]></content>
+    <tabTrigger>rse</tabTrigger>
+    <scope>meta.ruby.test_case.test</scope>
+    <description>refute_empty(..)</description>
+</snippet>

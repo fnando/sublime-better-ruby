@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[refute_instance_of ${1:ExpectedClass}, ${0:actual_instance}]]></content>
+    <tabTrigger>rsio</tabTrigger>
+    <scope>meta.ruby.test_case.test</scope>
+    <description>refute_instance_of(..)</description>
+</snippet>

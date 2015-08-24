@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[Dir['${1:pattern}']]]></content>
+    <tabTrigger>glob</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>Dir['..']</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[refute_same ${1:expected}, ${0:actual}]]></content>
+    <tabTrigger>rss</tabTrigger>
+    <scope>meta.ruby.test_case.test</scope>
+    <description>refute_same(..)</description>
+</snippet>

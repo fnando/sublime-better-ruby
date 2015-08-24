@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[assert page.has_text?(${1:t('${2:scope}')})]]></content>
+    <tabTrigger>pht</tabTrigger>
+    <scope>meta.rails.integration_test</scope>
+    <description>page.has_text? (capybara)</description>
+</snippet>

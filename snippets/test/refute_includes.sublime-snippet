@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[refute_includes ${1:collection}, ${2:item}]]></content>
+    <tabTrigger>rsi</tabTrigger>
+    <scope>meta.ruby.test_case.test</scope>
+    <description>refute_includes(..)</description>
+</snippet>

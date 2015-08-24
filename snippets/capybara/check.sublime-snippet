@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[check ${1:t('${2:scope}')}]]></content>
+    <tabTrigger>check</tabTrigger>
+    <scope>meta.rails.integration_test</scope>
+    <description>check (capybara)</description>
+</snippet>

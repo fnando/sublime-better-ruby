@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[refute_operator ${1:left}, :${2:operator}, ${0:right}]]></content>
+    <tabTrigger>rso</tabTrigger>
+    <scope>meta.ruby.test_case.test</scope>
+    <description>refute_operator(..)</description>
+</snippet>

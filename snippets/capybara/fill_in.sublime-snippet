@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[fill_in ${1:label('${2:scope}')}, with: '${3:value}']]></content>
+    <tabTrigger>fi</tabTrigger>
+    <scope>meta.rails.integration_test</scope>
+    <description>fill_in (capybara)</description>
+</snippet>

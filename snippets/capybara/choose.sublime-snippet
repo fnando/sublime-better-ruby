@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[choose ${1:t('${2:scope}')}]]></content>
+    <tabTrigger>choose</tabTrigger>
+    <scope>meta.rails.integration_test</scope>
+    <description>choose radio (capybara)</description>
+</snippet>

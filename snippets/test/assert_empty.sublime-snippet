@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[assert_empty ${1:object}]]></content>
+    <tabTrigger>ase</tabTrigger>
+    <scope>meta.ruby.test_case.test</scope>
+    <description>assert_empty(..)</description>
+</snippet>

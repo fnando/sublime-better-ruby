@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[test '$1' do
+  $0
+end]]></content>
+    <tabTrigger>t</tabTrigger>
+    <scope>meta.ruby.test_case</scope>
+    <description>test(&amp;block)</description>
+</snippet>

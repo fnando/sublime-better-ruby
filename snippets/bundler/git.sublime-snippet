@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+git '${1:repository} do
+  $0
+end
+]]></content>
+  <tabTrigger>git</tabTrigger>
+  <scope>source.ruby.bundler</scope>
+</snippet>

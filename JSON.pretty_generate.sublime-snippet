@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[JSON.pretty_generate(${1:object})]]></content>
+    <tabTrigger>jp</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>JSON.pretty_generate(*args)</description>
+</snippet>

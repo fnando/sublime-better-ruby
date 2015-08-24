@@ -1,0 +1,12 @@
+%YAML 1.2
+---
+name: Bundler
+file_extensions:
+  - Gemfile
+first_line_match: ^#!/.*\bruby
+scope: source.ruby.bundler
+contexts:
+  main:
+    - include: 'scope:source.ruby'
+    - match: \b(gem|ruby|source|group|git|install_if|path|git_source)\b
+      scope: support.function.ruby.bundler

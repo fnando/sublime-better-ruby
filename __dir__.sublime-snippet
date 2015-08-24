@@ -1,0 +1,5 @@
+<snippet>
+    <content><![CDATA[__dir__]]></content>
+    <tabTrigger>dir</tabTrigger>
+    <scope>source.ruby</scope>
+</snippet>

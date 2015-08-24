@@ -1,8 +1,0 @@
-<snippet>
-<content><![CDATA[
-${1:variable} = ${2:SomeClass}.new${3:(${4:args})}
-]]></content>
-    <tabTrigger>new</tabTrigger>
-    <scope>source.ruby</scope>
-    <description>SomeClass.new</description>
-</snippet>

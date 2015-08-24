@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[assert_in_epsilon ${1:expected_float}, ${2:actual_float}, ${0:0.001}]]></content>
+    <tabTrigger>asie</tabTrigger>
+    <scope>meta.ruby.test_case.test</scope>
+    <description>assert_in_epsilon(..)</description>
+</snippet>
