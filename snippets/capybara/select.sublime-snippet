@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[select ${1:option}, from: ${2:t('${3:scope}')}]]></content>
+    <content><![CDATA[select ${1:option}, from: ${2:t(${TM_QUOTE}${3:scope}${TM_QUOTE})}]]></content>
     <tabTrigger>select</tabTrigger>
     <scope>meta.rails.integration_test</scope>
     <description>select (capybara)</description>

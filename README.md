@@ -61,3 +61,34 @@ By the way, there is a [Better Rails](https://github.com/fnando/better-rails-for
   ]
 }
 ```
+
+## Override Quote Style
+
+By default, snippets use `'` as the preferred quote style. If you want to change it to `"`, just create the file `Packages/Users/Ruby-Quotes.tmPreferences` with the following content:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>Quotes</string>
+  <key>scope</key>
+  <string>source.ruby</string>
+  <key>settings</key>
+  <dict>
+    <key>shellVariables</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>TM_QUOTE</string>
+        <key>value</key>
+        <string>"</string>
+      </dict>
+    </array>
+  </dict>
+  <key>uuid</key>
+  <string>0FBD0784-F200-433C-AFFF-7F02BD6F7DB0</string>
+</dict>
+</plist>
+```

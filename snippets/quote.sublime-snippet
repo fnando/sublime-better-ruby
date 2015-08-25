@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
-File.expand_path('../$0', __FILE__)
+This is the quote: ${TM_QUOTE}
 ]]></content>
-  <tabTrigger>fep</tabTrigger>
+  <tabTrigger>quote</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>

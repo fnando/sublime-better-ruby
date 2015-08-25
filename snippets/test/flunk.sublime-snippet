@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[flunk('${0:Failure message.}')]]></content>
+    <content><![CDATA[flunk(${TM_QUOTE}${0:Failure message.}${TM_QUOTE})]]></content>
     <tabTrigger>fl</tabTrigger>
     <scope>source.ruby</scope>
     <description>flunk(..)</description>

@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-git '${1:repository} do
+git ${TM_QUOTE}${1:repository}${TM_QUOTE} do
   $0
 end
 ]]></content>

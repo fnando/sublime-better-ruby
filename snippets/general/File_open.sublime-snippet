@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[File.open('${1:path}', '${2:mode}')$0]]></content>
+    <content><![CDATA[File.open(${TM_QUOTE}${1:path}${TM_QUOTE}, ${TM_QUOTE}${2:mode}${TM_QUOTE})$0]]></content>
     <tabTrigger>fo</tabTrigger>
     <scope>source.ruby</scope>
     <description>File.open(path, mode)</description>

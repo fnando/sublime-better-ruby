@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[assert ${1:test}, '${0:Failure message.}']]></content>
+    <content><![CDATA[assert ${1:test}]]></content>
     <tabTrigger>as</tabTrigger>
     <scope>meta.ruby.test_case.test</scope>
     <description>assert(..)</description>

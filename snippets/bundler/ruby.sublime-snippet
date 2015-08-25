@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-ruby '${1:2.2.3}'
+ruby ${TM_QUOTE}${1:2.2.3}${TM_QUOTE}
 ]]></content>
   <tabTrigger>ruby</tabTrigger>
   <scope>source.ruby.bundler</scope>

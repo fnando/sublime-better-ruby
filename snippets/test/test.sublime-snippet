@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[test '$1' do
+    <content><![CDATA[test ${TM_QUOTE}$1${TM_QUOTE} do
   $0
 end]]></content>
     <tabTrigger>t</tabTrigger>

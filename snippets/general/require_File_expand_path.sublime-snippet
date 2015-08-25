@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-require File.expand_path('../$0', __FILE__)
+require File.expand_path(${TM_QUOTE}../$0${TM_QUOTE}, __FILE__)
 ]]></content>
   <tabTrigger>rfep</tabTrigger>
   <scope>source.ruby</scope>

@@ -1,6 +1,6 @@
 <snippet>
 <content><![CDATA[
-YAML.load_file('$0')
+YAML.load_file(${TM_QUOTE}$0${TM_QUOTE})
 ]]></content>
     <tabTrigger>ylf</tabTrigger>
     <scope>source.ruby</scope>

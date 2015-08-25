@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-source '${1:https://rubygems.org}'
+source ${TM_QUOTE}${1:https://rubygems.org}${TM_QUOTE}
 ]]></content>
   <tabTrigger>sour</tabTrigger>
   <scope>source.ruby.bundler</scope>

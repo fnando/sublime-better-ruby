@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[${1:key}: ${2:'${3:value}'}${4:, }]]></content>
+    <content><![CDATA[${1:key}: ${2:${TM_QUOTE}${3:value}${TM_QUOTE}}${4:, }]]></content>
     <tabTrigger>:</tabTrigger>
     <scope>source.ruby</scope>
     <description>Hash Pair — key: "value"</description>

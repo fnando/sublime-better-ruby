@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[click_button ${1:button('${2:scope}')}]]></content>
+    <content><![CDATA[click_button ${1:button(${TM_QUOTE}${2:scope}${TM_QUOTE})}]]></content>
     <tabTrigger>clic</tabTrigger>
     <scope>meta.rails.integration_test</scope>
     <description>click_button (capybara)</description>

@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[attach_file ${1:label('${3:scope}')}, ${4:file path}]]></content>
+    <content><![CDATA[attach_file ${1:label(${TM_QUOTE}${3:scope}${TM_QUOTE})}, ${4:file path}]]></content>
     <tabTrigger>attach_file</tabTrigger>
     <scope>meta.rails.integration_test</scope>
     <description>attach_file (capybara)</description>

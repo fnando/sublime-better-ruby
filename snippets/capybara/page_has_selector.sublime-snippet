@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[assert page.has_selector?('${1:selector}')]]></content>
+    <content><![CDATA[assert page.has_selector?(${TM_QUOTE}${1:selector}${TM_QUOTE})]]></content>
     <tabTrigger>phs</tabTrigger>
     <scope>meta.rails.integration_test</scope>
     <description>page.has_selector? (capybara)</description>

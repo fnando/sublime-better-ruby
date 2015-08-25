@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[Dir['${1:pattern}']]]></content>
+    <content><![CDATA[Dir[${TM_QUOTE}${1:pattern}${TM_QUOTE}]]]></content>
     <tabTrigger>glob</tabTrigger>
     <scope>source.ruby</scope>
     <description>Dir['..']</description>
