@@ -1000,3 +1000,133 @@ contexts:
       scope: comment.line.number-sign.ruby
       captures:
         1: punctuation.definition.comment.ruby
+
+    - match: '%I\('
+      comment: literal capable of interpolation ()
+      captures:
+        0: punctuation.definition.symbol.begin.ruby
+      push:
+        - meta_scope: symbol.quoted.other.literal.upper.ruby
+        - match: \)
+          captures:
+            0: punctuation.definition.symbol.end.ruby
+          pop: true
+        - include: interpolated_ruby
+        - include: escaped_char
+        - include: nest_parens_i
+    - match: '%I\['
+      comment: "literal capable of interpolation []"
+      captures:
+        0: punctuation.definition.symbol.begin.ruby
+      push:
+        - meta_scope: symbol.quoted.other.literal.upper.ruby
+        - match: '\]'
+          captures:
+            0: punctuation.definition.symbol.end.ruby
+          pop: true
+        - include: interpolated_ruby
+        - include: escaped_char
+        - include: nest_brackets_i
+    - match: '%I\<'
+      comment: literal capable of interpolation <>
+      captures:
+        0: punctuation.definition.symbol.begin.ruby
+      push:
+        - meta_scope: symbol.quoted.other.literal.upper.ruby
+        - match: \>
+          captures:
+            0: punctuation.definition.symbol.end.ruby
+          pop: true
+        - include: interpolated_ruby
+        - include: escaped_char
+        - include: nest_ltgt_i
+    - match: '%I\{'
+      comment: "literal capable of interpolation -- {}"
+      captures:
+        0: punctuation.definition.symbol.begin.ruby
+      push:
+        - meta_scope: symbol.quoted.double.ruby.mod
+        - match: '\}'
+          captures:
+            0: punctuation.definition.symbol.end.ruby
+          pop: true
+        - include: interpolated_ruby
+        - include: escaped_char
+        - include: nest_curly_i
+    - match: '%I([^\w])'
+      comment: literal capable of interpolation -- wildcard
+      captures:
+        0: punctuation.definition.symbol.begin.ruby
+      push:
+        - meta_scope: symbol.quoted.other.literal.upper.ruby
+        - match: \1
+          captures:
+            0: punctuation.definition.symbol.end.ruby
+          pop: true
+        - include: interpolated_ruby
+        - include: escaped_char
+
+    - match: '%i\('
+      comment: literal incapable of interpolation -- ()
+      captures:
+        0: punctuation.definition.symbol.begin.ruby
+      push:
+        - meta_scope: symbol.quoted.other.literal.lower.ruby
+        - match: \)
+          captures:
+            0: punctuation.definition.symbol.end.ruby
+          pop: true
+        - match: \\\)|\\\\
+          scope: constant.character.escape.ruby
+        - include: nest_parens
+    - match: '%i\<'
+      comment: literal incapable of interpolation -- <>
+      captures:
+        0: punctuation.definition.symbol.begin.ruby
+      push:
+        - meta_scope: symbol.quoted.other.literal.lower.ruby
+        - match: \>
+          captures:
+            0: punctuation.definition.symbol.end.ruby
+          pop: true
+        - match: \\\>|\\\\
+          scope: constant.character.escape.ruby
+        - include: nest_ltgt
+    - match: '%i\['
+      comment: "literal incapable of interpolation -- []"
+      captures:
+        0: punctuation.definition.symbol.begin.ruby
+      push:
+        - meta_scope: symbol.quoted.other.literal.lower.ruby
+        - match: '\]'
+          captures:
+            0: punctuation.definition.symbol.end.ruby
+          pop: true
+        - match: '\\\]|\\\\'
+          scope: constant.character.escape.ruby
+        - include: nest_brackets
+    - match: '%i\{'
+      comment: "literal incapable of interpolation -- {}"
+      captures:
+        0: punctuation.definition.symbol.begin.ruby
+      push:
+        - meta_scope: symbol.quoted.other.literal.lower.ruby
+        - match: '\}'
+          captures:
+            0: punctuation.definition.symbol.end.ruby
+          pop: true
+        - match: '\\\}|\\\\'
+          scope: constant.character.escape.ruby
+        - include: nest_curly
+    - match: '%i([^\w])'
+      comment: literal incapable of interpolation -- wildcard
+      captures:
+        0: punctuation.definition.symbol.begin.ruby
+      push:
+        - meta_scope: symbol.quoted.other.literal.lower.ruby
+        - match: \1
+          captures:
+            0: punctuation.definition.symbol.end.ruby
+          pop: true
+        - match: \\.
+          comment: Cant be named because its not neccesarily an escape.
