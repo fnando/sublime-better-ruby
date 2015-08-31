@@ -7,15 +7,22 @@ first_line_match: ^#!/.*\bruby
 scope: source.ruby.test
 contexts:
   main:
-    - include: 'scope:source.ruby'
-    - match: (^\s*)(?=test\s+.*?\s+do$)
+    - match: '(^\s*)(?=class\s+.*?Test\s*<\s*.*?Test$)'
+      push:
+        - meta_scope: meta.ruby.test_case
+        - match: ^\1(?=end)\b
+          pop: true
+        - include: 'scope:source.ruby'
+        - include: main
+
+    - match: (^\s*)(?=(test|setup|teardown)\s+.*?\s+do$)
       push:
         - meta_scope: meta.ruby.test_case.test
         - match: ^\1(?=end)\b
           pop: true
         - include: 'scope:scope.ruby'
         - include: main
-    - match: (^\s*)(?=def test_.*?$)
+    - match: (^\s*)(?=def (test_.*?|setup|teardown)$)
       push:
         - meta_scope: meta.ruby.test_case.test
         - match: ^\1(?=end)\b
@@ -26,7 +33,8 @@ contexts:
       scope: support.function.ruby.test
     - match: \bassert(_(empty|equal|includes|in_delta|in_epsilon|instance_of|kind_of|match|nil|operator|predicate|respond_to|same))?\b
       scope: support.function.ruby.test
-    - match: \b(flunk|skip|capture_io|capture_subprocess_io|test)\b
+    - match: \b(flunk|skip|capture_io|capture_subprocess_io|test|setup|teardown)\b
       scope: support.function.ruby.test
     - match: \b(visit|click_on|click_button|click_link|fill_in|check|uncheck|select|choose|attach_file|page)\b
       scope: support.function.ruby.test.capybara
+    - include: 'scope:source.ruby'

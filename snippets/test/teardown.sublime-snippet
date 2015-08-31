@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[teardown ${TM_QUOTE}$1${TM_QUOTE} do
+  $0
+end]]></content>
+    <tabTrigger>tear</tabTrigger>
+    <scope>meta.ruby.test_case</scope>
+    <description>teardown(&amp;block)</description>
+</snippet>

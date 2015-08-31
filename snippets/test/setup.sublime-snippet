@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[setup ${TM_QUOTE}$1${TM_QUOTE} do
+  $0
+end]]></content>
+    <tabTrigger>setup</tabTrigger>
+    <scope>meta.ruby.test_case</scope>
+    <description>setup(&amp;block)</description>
+</snippet>
