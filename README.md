@@ -2,6 +2,8 @@
 
 This is a custom Ruby package, that includes snippets, custom syntax highlighters and more!
 
+**ATTENTION:** This plugin uses the new `.sublime-syntax` format, which is only available on [Dev Channel](http://www.sublimetext.com/3dev) Build 3084.
+
 ## Install
 
 First of all, add this custom repository: <https://gist.github.com/fnando/56393d3900af55bf9e94>; just follow the instructions.
