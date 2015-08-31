@@ -7,7 +7,7 @@ first_line_match: ^#!/.*\bruby
 scope: source.ruby.test
 contexts:
   main:
-    - match: '(^\s*)(?=class\s+.*?Test\s*<\s*.*?Test$)'
+    - match: '(^\s*)(?=class\s+.*?Test\s*<\s*.*?Test(Case)?$)'
       push:
         - meta_scope: meta.ruby.test_case
         - match: ^\1(?=end)\b
