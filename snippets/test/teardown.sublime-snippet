@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[teardown ${TM_QUOTE}$1${TM_QUOTE} do
+    <content><![CDATA[teardown do
   $0
 end]]></content>
     <tabTrigger>tear</tabTrigger>
