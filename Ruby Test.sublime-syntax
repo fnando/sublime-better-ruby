@@ -31,9 +31,9 @@ contexts:
         - include: main
     - match: \brefute(_(empty|equal|includes|in_delta|in_epsilon|instance_of|kind_of|match|nil|operator|output|predicate|raises|respond_to|same|send|silence|throws))?\b
       scope: support.function.ruby.test
-    - match: \bassert(_(empty|equal|includes|in_delta|in_epsilon|instance_of|kind_of|match|nil|operator|predicate|respond_to|same))?\b
+    - match: \bassert(_(empty|equal|includes|in_delta|in_epsilon|instance_of|kind_of|match|nil|operator|predicate|raises|respond_to|same))?\b
       scope: support.function.ruby.test
-    - match: \b(flunk|skip|capture_io|capture_subprocess_io|test|setup|teardown)\b
+    - match: \b(flunk|skip|capture_io|capture_subprocess_io|test|setup|teardown|let)\b
       scope: support.function.ruby.test
     - match: \b(visit|click_on|click_button|click_link|fill_in|check|uncheck|select|choose|attach_file|page)\b
       scope: support.function.ruby.test.capybara
