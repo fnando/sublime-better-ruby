@@ -1,7 +1,0 @@
-<snippet>
-  <content><![CDATA[
-This is the quote: ${TM_QUOTE}
-]]></content>
-  <tabTrigger>quote</tabTrigger>
-  <scope>source.ruby</scope>
-</snippet>
