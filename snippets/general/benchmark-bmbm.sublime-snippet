@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[require ${TM_QUOTE}benchmark${TM_QUOTE}
+
+GC.disable
+CYCLES = 1_000_000
+
+Benchmark.bmbm do |x|
+  x.report(${TM_QUOTE}$1${TM_QUOTE}) {CYCLES.times{ $0 }}
+end]]></content>
+    <tabTrigger>bench</tabTrigger>
+    <scope>source.ruby</scope>
+    <description>benchmark (bmbm)</description>
+</snippet>
