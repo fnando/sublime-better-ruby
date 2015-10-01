@@ -35,6 +35,6 @@ contexts:
       scope: support.function.ruby.test
     - match: \b(flunk|skip|capture_io|capture_subprocess_io|test|setup|teardown|let)\b
       scope: support.function.ruby.test
-    - match: \b(visit|click_on|click_button|click_link|fill_in|check|uncheck|select|choose|attach_file|page)\b
+    - match: \b(visit|click_on|click_button|click_link|fill_in|check|uncheck|select|choose|attach_file|page|within|within_fieldset|within_table|window_opened_by|within_window|accept_alert|accept_confirm|accept_prompt|dismiss_alert|dismiss_confirm|dismiss_prompt|find_field|find_link|find_button)\b
       scope: support.function.ruby.test.capybara
     - include: 'scope:source.ruby'
