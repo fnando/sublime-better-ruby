@@ -1,7 +1,6 @@
 <snippet>
     <content><![CDATA[require ${TM_QUOTE}benchmark${TM_QUOTE}
 
-GC.disable
 CYCLES = 1_000_000
 
 Benchmark.bmbm do |x|

@@ -1,6 +1,5 @@
 <snippet>
     <content><![CDATA[require ${TM_QUOTE}benchmark/ips${TM_QUOTE}
-GC.disable
 
 Benchmark.ips do |x|
   x.report(${TM_QUOTE}$1${TM_QUOTE}) { $0 }
