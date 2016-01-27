@@ -8,5 +8,5 @@ scope: source.ruby.bundler
 contexts:
   main:
     - include: 'scope:source.ruby'
-    - match: \b(gem|ruby|source|group|git|install_if|path|git_source)\b
+    - match: \b(env|eval_gemfile|gem|gemspec|git|git_source|github|group|install_if|path|platform|platforms|ruby|source|svn)\b
       scope: support.function.ruby.bundler
