@@ -2,7 +2,7 @@
 
 This is a custom Ruby package, that includes snippets, custom syntax highlighters and more!
 
-**ATTENTION:** This plugin uses the new `.sublime-syntax` format, which is only available on [Dev Channel](http://www.sublimetext.com/3dev) Build 3084.
+**ATTENTION:** This plugin uses the new `.sublime-syntax` format, which is only available on [Latest Stable](http://www.sublimetext.com/3) Build 3103 or above.
 
 ## Install
 
