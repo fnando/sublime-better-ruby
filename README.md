@@ -1,20 +1,27 @@
 # Better Ruby
 
-This is a custom Ruby package, that includes snippets, custom syntax highlighters and more!
+This is a custom Ruby package, that includes snippets, custom syntax
+highlighters and more!
 
 ## Installation
 
 ### Setup Package Control Repository
 
 1. Follow the instructions from https://sublime.fnando.com.
-2. Open the command pallete, run “Package Control: Install Package“, then search for “Rubocop Formatter“.
-3. Install the [ApplySyntax](https://github.com/facelessuser/ApplySyntax) package and use the settings below.
+2. Open the command pallete, run “Package Control: Install Package“, then search
+   for “Rubocop Formatter“.
+3. Install the [ApplySyntax](https://github.com/facelessuser/ApplySyntax)
+   package and use the settings below.
 
-By the way, there is a [Better Rails](https://github.com/fnando/better-rails-for-sublime-text) package as well.
+By the way, there is a
+[Better Rails](https://github.com/fnando/better-rails-for-sublime-text) package
+as well.
 
 ### Git Clone
 
-Clone this repository into the Sublime Text “Packages” directory, which is located where ever the “Preferences” -> “Browse Packages” option in sublime takes you.
+Clone this repository into the Sublime Text “Packages” directory, which is
+located where ever the “Preferences” -> “Browse Packages” option in sublime
+takes you.
 
 ## ApplySyntax configuration
 
@@ -26,40 +33,42 @@ Clone this repository into the Sublime Text “Packages” directory, which is l
   "syntaxes": [
     {
       "syntax": "Better Ruby/Bundler",
-      "rules": [
-        {"file_path": ".*(\\\\|/)Gemfile$"}
-      ]
+      "rules": [{ "file_path": ".*(\\\\|/)Gemfile$" }]
     },
 
     {
       "syntax": "Better Ruby/Puma",
-      "rules": [
-        {"file_path": ".*(\\\\|/)puma\\.rb$"}
-      ]
+      "rules": [{ "file_path": ".*(\\\\|/)puma\\.rb$" }]
     },
 
     {
       "syntax": "Better Ruby/Ruby Test",
-      "rules": [
-        {"file_path": ".*_test\\.rb$"}
-      ]
+      "rules": [{ "file_path": ".*_test\\.rb$" }]
     },
 
     {
       "syntax": "Better Ruby/Ruby",
-      "extensions": ["thor", "rake", "simplecov", "jbuilder", "rb", "podspec", "rabl"],
+      "extensions": [
+        "thor",
+        "rake",
+        "simplecov",
+        "jbuilder",
+        "rb",
+        "podspec",
+        "rabl"
+      ],
       "rules": [
-        {"file_path": ".*(\\\\|/)Capfile$"},
-        {"file_path": ".*(\\\\|/)Guardfile$"},
-        {"file_path": ".*(\\\\|/)[Rr]akefile$"},
-        {"file_path": ".*(\\\\|/)Berksfile$"},
-        {"file_path": ".*(\\\\|/)[Cc]heffile$"},
-        {"file_path": ".*(\\\\|/)Thorfile$"},
-        {"file_path": ".*(\\\\|/)Podfile$"},
-        {"file_path": ".*(\\\\|/)config.ru$"},
-        {"file_path": ".*\\\\Vagrantfile(\\\\..*)?$"},
-        {"file_path": ".*/Vagrantfile(/..*)?$"},
-        {"interpreter": "ruby"}
+        { "file_path": ".*(\\\\|/)Capfile$" },
+        { "file_path": ".*(\\\\|/)Guardfile$" },
+        { "file_path": ".*(\\\\|/)[Rr]akefile$" },
+        { "file_path": ".*(\\\\|/)Berksfile$" },
+        { "file_path": ".*(\\\\|/)[Cc]heffile$" },
+        { "file_path": ".*(\\\\|/)Thorfile$" },
+        { "file_path": ".*(\\\\|/)Podfile$" },
+        { "file_path": ".*(\\\\|/)config.ru$" },
+        { "file_path": ".*\\\\Vagrantfile(\\\\..*)?$" },
+        { "file_path": ".*/Vagrantfile(/..*)?$" },
+        { "interpreter": "ruby" }
       ]
     }
   ]
@@ -68,7 +77,9 @@ Clone this repository into the Sublime Text “Packages” directory, which is l
 
 ## Override Quote Style
 
-By default, snippets use `'` as the preferred quote style. If you want to change it to `"`, just create the file `Packages/Users/Ruby-Quotes.tmPreferences` with the following content:
+By default, snippets use `"` as the preferred quote style. If you want to change
+it to `'`, just create the file `Packages/User/Ruby-Quotes.tmPreferences` with
+the following content:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -87,12 +98,10 @@ By default, snippets use `'` as the preferred quote style. If you want to change
         <key>name</key>
         <string>TM_QUOTE</string>
         <key>value</key>
-        <string>"</string>
+        <string>'</string>
       </dict>
     </array>
   </dict>
-  <key>uuid</key>
-  <string>0FBD0784-F200-433C-AFFF-7F02BD6F7DB0</string>
 </dict>
 </plist>
 ```

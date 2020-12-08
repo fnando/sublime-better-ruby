@@ -3,13 +3,75 @@
 name: Puma
 file_extensions:
   - puma.rb
-first_line_match: ^#!/.*\bruby
-scope: source.ruby.test
+scope: source.ruby.puma
 contexts:
   main:
-      # https://github.com/puma/puma/blob/master/lib/puma/dsl.rb
-    - include: 'scope:source.ruby'
-    - match: \b(activate_control_app|after_worker_boot|app|before_fork|bind|clean_thread_locals|daemonize|directory|drain_on_shutdown|environment|lowlevel_error_handler|on_restart|on_worker_boot|on_worker_fork|on_worker_shutdown|pidfile|port|prune_bundler|queue_requests|quiet|rackup|restart_command|shutdown_debug|ssl_bind|state_path|stdout_redirect|tag|tcp_mode|threads|worker_shutdown_timeout|worker_timeout|workers)\b
-      scope: support.function.ruby.puma
+    # https://github.com/puma/puma/blob/master/lib/puma/dsl.rb
+    - include: puma
+    - include: "scope:source.ruby"
+
+  puma:
+    - scope: support.function.ruby.puma
+      match: |-
+        (?x:
+          \b(
+            activate_control_app|
+            after_worker_boot|
+            after_worker_fork|
+            app|
+            before_fork|
+            bind_to_activated_sockets|
+            bind|
+            clean_thread_locals|
+            clear_binds!|
+            daemonize|
+            debug|
+            default_host|
+            directory|
+            drain_on_shutdown|
+            early_hints|
+            environment|
+            extra_runtime_dependencies|
+            first_data_timeout|
+            force_shutdown_after|
+            fork_worker|
+            log_formatter|
+            log_requests|
+            lowlevel_error_handler|
+            max_fast_inline|
+            nakayoshi_fork|
+            on_refork|
+            on_restart|
+            on_worker_boot|
+            on_worker_fork|
+            on_worker_shutdown|
+            out_of_band|
+            persistent_timeout|
+            pidfile|
+            port|
+            preload_app!|
+            prune_bundler|
+            queue_requests|
+            quiet|
+            rackup|
+            raise_exception_on_sigterm|
+            restart_command|
+            set_remote_address|
+            shutdown_debug|
+            ssl_bind|
+            state_path|
+            state_permission|
+            stdout_redirect|
+            tag|
+            tcp_mode|
+            threads|
+            wait_for_less_busy_worker|
+            worker_boot_timeout|
+            worker_shutdown_timeout|
+            worker_timeout|
+            workers
+          )\b
+        )
+
     - match: \bpreload_app!(\s|$)
       scope: support.function.ruby.puma

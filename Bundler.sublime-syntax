@@ -4,10 +4,30 @@ name: Bundler
 file_extensions:
   - Gemfile
   - Gemfile.dev
-first_line_match: ^#!/.*\bruby
 scope: source.ruby.bundler
 contexts:
   main:
-    - include: 'scope:source.ruby'
-    - match: \b(env|eval_gemfile|gem|gemspec|git|git_source|github|group|install_if|path|platform|platforms|ruby|source|svn)\b
-      scope: support.function.ruby.bundler
+    - include: bundler
+    - include: "scope:source.ruby"
+
+  bundler:
+    - scope: support.function.ruby.bundler
+      match: |-
+        (?x:
+          \b
+          env|
+          eval_gemfile|
+          gem|
+          gemspec|
+          git|
+          git_source|
+          github|
+          group|
+          install_if|
+          path|
+          platforms?|
+          ruby|
+          source|
+          svn
+          \b
+        )

@@ -14,11 +14,9 @@
 				<key>name</key>
 				<string>TM_QUOTE</string>
 				<key>value</key>
-				<string>'</string>
+				<string>"</string>
 			</dict>
 		</array>
 	</dict>
-	<key>uuid</key>
-	<string>0FBD0784-F200-433C-AFFF-7F02BD6F7DB0</string>
 </dict>
 </plist>

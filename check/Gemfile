@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+gem "gem name", "version"
+group :development do
+end
+
+platforms :ruby do
+end

@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-File.expand_path(${TM_QUOTE}../$0${TM_QUOTE}, __FILE__)
+File.expand_path(${TM_QUOTE}$0${TM_QUOTE}, __dir__)
 ]]></content>
   <tabTrigger>fep</tabTrigger>
   <scope>source.ruby</scope>

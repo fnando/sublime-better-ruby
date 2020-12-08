@@ -1,8 +1,8 @@
 <snippet>
-    <content><![CDATA[test ${TM_QUOTE}$1${TM_QUOTE} do
+    <content><![CDATA[test ${TM_QUOTE}${1:test description}${TM_QUOTE} do
   $0
 end]]></content>
-    <tabTrigger>t</tabTrigger>
+    <tabTrigger>test</tabTrigger>
     <scope>meta.ruby.test_case</scope>
     <description>test(&amp;block)</description>
 </snippet>

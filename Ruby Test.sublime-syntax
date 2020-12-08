@@ -2,18 +2,20 @@
 ---
 name: Ruby Test
 file_extensions:
-  - Gemfile
-first_line_match: ^#!/.*\bruby
+  - _test.rb
 scope: source.ruby.test
 contexts:
   main:
-    - include: 'scope:source.ruby'
+    - include: ruby-test
+    - include: "scope:source.ruby"
+
+  ruby-test:
     - match: '(^\s*)(?=class\s+.*?Test\s*<\s*.*?Test(Case)?$)'
       push:
         - meta_scope: meta.ruby.test_case
         - match: ^\1(?=end)\b
           pop: true
-        - include: 'scope:source.ruby'
+        - include: "scope:source.ruby"
         - include: main
 
     - match: (^\s*)(?=(test|setup|teardown)\s+.*?\s+do$)
@@ -21,20 +23,104 @@ contexts:
         - meta_scope: meta.ruby.test_case.test
         - match: ^\1(?=end)\b
           pop: true
-        - include: 'scope:scope.ruby'
+        - include: "scope:scope.ruby"
         - include: main
     - match: (^\s*)(?=def (test_.*?|setup|teardown)$)
       push:
         - meta_scope: meta.ruby.test_case.test
         - match: ^\1(?=end)\b
           pop: true
-        - include: 'scope:scope.ruby'
+        - include: "scope:scope.ruby"
         - include: main
-    - match: \brefute(_(empty|equal|includes|in_delta|in_epsilon|instance_of|kind_of|match|nil|operator|output|predicate|raises|respond_to|same|send|silence|throws))?\b
-      scope: support.function.ruby.test
-    - match: \bassert(_(empty|equal|includes|in_delta|in_epsilon|instance_of|kind_of|match|nil|operator|predicate|raises|respond_to|same))?\b
-      scope: support.function.ruby.test
-    - match: \b(flunk|skip|capture_io|capture_subprocess_io|test|setup|teardown|let)\b
-      scope: support.function.ruby.test
-    - match: \b(visit|click_on|click_button|click_link|fill_in|check|uncheck|select|choose|attach_file|page|within|within_fieldset|within_table|window_opened_by|within_window|accept_alert|accept_confirm|accept_prompt|dismiss_alert|dismiss_confirm|dismiss_prompt|find_field|find_link|find_button)\b
-      scope: support.function.ruby.test.capybara
+    - scope: support.function.ruby.test
+      match: |-
+        (?x:
+          \brefute(_(
+            empty|
+            equal|
+            includes|
+            in_delta|
+            in_epsilon|
+            instance_of|
+            kind_of|
+            match|
+            nil|
+            operator|
+            output|
+            predicate|
+            raises|
+            respond_to|
+            same|
+            send|
+            silence|
+            throws
+          ))?\b
+        )
+
+    - scope: support.function.ruby.test
+      match: |-
+        (?x:
+          \bassert(_(
+            empty|
+            equal|
+            includes|
+            in_delta|
+            in_epsilon|
+            instance_of|
+            kind_of|
+            match|
+            nil|
+            operator|
+            predicate|
+            raises|
+            respond_to|
+            same
+          ))?\b
+        )
+
+    - scope: support.function.ruby.test
+      match: |-
+        (?x:
+          \b(
+            flunk|
+            skip|
+            capture_io|
+            capture_subprocess_io|
+            test|
+            setup|
+            teardown|
+            let
+          )\b
+        )
+
+    - scope: support.function.ruby.test.capybara
+      match: |-
+        (?x:
+          \b(
+            visit|
+            click_on|
+            click_button|
+            click_link|
+            fill_in|
+            check|
+            uncheck|
+            select|
+            choose|
+            attach_file|
+            page|
+            within|
+            within_fieldset|
+            within_table|
+            window_opened_by|
+            within_window|
+            accept_alert|
+            accept_confirm|
+            accept_prompt|
+            dismiss_alert|
+            dismiss_confirm|
+            dismiss_prompt|
+            find_field|
+            find_link|
+            find_button
+          )\b
+        )
