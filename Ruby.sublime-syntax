@@ -96,12 +96,141 @@ contexts:
     - include: variables
     - include: method
     - include: strings
+    - include: yard
     - include: comments
     - include: data-section
     - include: heredocs
     - include: punctuation
     - include: operators
     - include: identifiers-accessors
+
+  yard_link:
+    - match: ' (\{)(#[^\}]+)(\})'
+      captures:
+        1: punctuation.definition.placeholder.begin.yard
+        2: meta.link.yard
+        3: punctuation.definition.placeholder.end.yard
+
+  yard_url:
+    - match: '(https?://[-a-z0-9A-Z.%@?=/#&\[\]:]+)'
+      scope: meta.link.url.yard
+      push:
+        - include: yard_inline_formatting
+        - match: $
+          pop: true
+
+  yard_italic:
+    - match: " (_)(.*?)(_)"
+      captures:
+        1: punctuation.definition.italic.begin.yard
+        2: markup.italic.yard
+        3: punctuation.definition.italic.end.yard
+
+  yard_bold:
+    - match: ' (\*)(.*?)(\*)'
+      captures:
+        1: punctuation.definition.bold.begin.yard
+        2: markup.bold.yard
+        3: punctuation.definition.bold.end.yard
+
+  yard_code_plus:
+    - match: ' (\+)(.*?)(\+)'
+      captures:
+        1: punctuation.definition.begin.yard
+        2: markup.raw.inline.yard
+        3: punctuation.definition.end.yard
+
+  yard_code_fenced:
+    - match: ' (\`)(.*?)(\`)'
+      captures:
+        1: punctuation.definition.begin.yard
+        2: markup.raw.inline.yard
+        3: punctuation.definition.end.yard
+
+  yard_inline_formatting:
+    - include: yard_italic
+    - include: yard_bold
+    - include: yard_code_plus
+    - include: yard_code_fenced
+    - include: yard_link
+    - include: yard_url
+
+  yard_tags_with_one_argument:
+    - match:
+        "(@(?:api|since|version|!visibility|!scope|!?macro|!method|!group))
+        +(.+)"
+      push:
+        - match: $
+          pop: true
+      captures:
+        1: entity.other.attribute-name.documentation.yard
+        2: support.constant.yard
+
+  yard_tags_with_type:
+    - match: '(@(?:return|yield|raise|yieldreturn)) +(\[)(.*?)(\])'
+      push:
+        - include: yard_inline_formatting
+        - match: $
+          pop: true
+      captures:
+        1: entity.other.attribute-name.documentation.yard
+        2: punctuation.definition.annotation.begin.yard
+        3: entity.name.type.yard
+        4: punctuation.definition.annotation.begin.yard
+
+  yard_tags:
+    - match: "(@(abstract|author|example|deprecated|note|todo|see|param|private|!endgroup|!parse))"
+      push:
+        - include: yard_inline_formatting
+        - match: $
+          pop: true
+      captures:
+        1: entity.other.attribute-name.documentation.yard
+
+  yard_param:
+    - match: (@(?:param|yieldparam)) +([a-zA-Z0-9_]+) +(\[)(.*?)(\])
+      push:
+        - include: yard_inline_formatting
+        - match: $
+          pop: true
+      captures:
+        1: entity.other.attribute-name.documentation.yard
+        2: variable.parameter.yard
+        3: punctuation.definition.bracket.begin.yard
+        4: entity.name.type.yard
+        5: punctuation.definition.bracket.end.yard
+
+  yard_option:
+    - match:
+        '(@option) +([a-zA-Z0-9_]+) +(\[)(.*?)(\]) +([^ ]+)(?: +(\()(.*?)(\)))?'
+      push:
+        - include: yard_inline_formatting
+        - match: $
+          pop: true
+      captures:
+        1: entity.other.attribute-name.documentation.yard
+        2: variable.parameter.yard
+        3: punctuation.definition.bracket.begin.yard
+        4: entity.name.type.yard
+        5: punctuation.definition.bracket.end.yard
+        6: meta.mapping.key.yard
+        7: punctuation.definition.bracket.begin.yard
+        8: variable.other.yard
+        9: punctuation.definition.bracket.begin.yard
+
+  yard:
+    - match: \# +
+      scope: punctuation.definition.comment.ruby
+      push:
+        - include: yard_inline_formatting
+        - include: yard_tags_with_one_argument
+        - include: yard_param
+        - include: yard_option
+        - include: yard_tags_with_type
+        - include: yard_tags
+        - meta_scope: comment.line.number-sign.ruby
+        - match: \n
+          pop: true
 
   comments:
     # multiline comments

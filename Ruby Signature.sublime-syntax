@@ -1,0 +1,15 @@
+%YAML 1.2
+---
+name: Ruby Signature
+file_extensions:
+  - rbs
+scope: source.ruby-signature
+
+contexts:
+  main:
+    - include: ruby-signature
+    - include: "scope:source.ruby"
+
+  ruby-signature:
+    - match: '\b(untyped)\b(?![?!])'
+      scope: constant.language.ruby
