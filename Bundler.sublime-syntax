@@ -17,8 +17,8 @@ contexts:
           \b
           env|
           eval_gemfile|
-          gem|
           gemspec|
+          gem|
           git|
           git_source|
           github|
