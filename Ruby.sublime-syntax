@@ -112,7 +112,7 @@ contexts:
         3: punctuation.definition.placeholder.end.yard
 
   yard_url:
-    - match: '(https?://[-a-z0-9A-Z.%@?=/#&\[\]:]+)'
+    - match: "(\\{.*?\\})?(\\[https?://[-_a-z0-9A-Z.%@?=/#&:]+\\])"
       scope: meta.link.url.yard
       push:
         - include: yard_inline_formatting
@@ -156,8 +156,7 @@ contexts:
     - include: yard_url
 
   yard_tags_with_one_argument:
-    - match:
-        "(@(?:api|since|version|!visibility|!scope|!?macro|!method|!group))
+    - match: "(@(?:api|since|version|!visibility|!scope|!?macro|!method|!group))
         +(.+)"
       push:
         - match: $
@@ -201,8 +200,7 @@ contexts:
         5: punctuation.definition.bracket.end.yard
 
   yard_option:
-    - match:
-        '(@option) +([a-zA-Z0-9_]+) +(\[)(.*?)(\]) +([^ ]+)(?: +(\()(.*?)(\)))?'
+    - match: '(@option) +([a-zA-Z0-9_]+) +(\[)(.*?)(\]) +([^ ]+)(?: +(\()(.*?)(\)))?'
       push:
         - include: yard_inline_formatting
         - match: $
@@ -278,8 +276,7 @@ contexts:
         - meta_content_scope: meta.class.ruby
         - match: "(?={{path_lookahead}})"
           set:
-            - meta_content_scope:
-                meta.class.ruby entity.other.inherited-class.ruby
+            - meta_content_scope: meta.class.ruby entity.other.inherited-class.ruby
             - include: name-parts
             - match: ""
               pop: true
@@ -447,8 +444,7 @@ contexts:
     - match: ":'"
       scope: punctuation.definition.constant.ruby
       push:
-        - meta_scope:
-            meta.constant.ruby constant.other.symbol.single-quoted.ruby
+        - meta_scope: meta.constant.ruby constant.other.symbol.single-quoted.ruby
         - match: "'"
           scope: punctuation.definition.constant.ruby
           pop: true
@@ -457,8 +453,7 @@ contexts:
     - match: ':"'
       scope: punctuation.definition.constant.ruby
       push:
-        - meta_scope:
-            meta.constant.ruby constant.other.symbol.double-quoted.ruby
+        - meta_scope: meta.constant.ruby constant.other.symbol.double-quoted.ruby
         - match: '"'
           scope: punctuation.definition.constant.ruby
           pop: true
@@ -498,8 +493,7 @@ contexts:
           scope: meta.braces.ruby punctuation.section.braces.end.ruby
           pop: true
         - match: \h{0,6}
-          scope:
-            meta.number.integer.hexadecimal.ruby constant.numeric.value.ruby
+          scope: meta.number.integer.hexadecimal.ruby constant.numeric.value.ruby
         - match: \S
           scope: invalid.illegal.escape.ruby
     - match: |-
@@ -543,8 +537,7 @@ contexts:
 
   maybe-block-parameters:
     - match: \|
-      scope:
-        meta.block.parameters.ruby punctuation.definition.parameters.begin.ruby
+      scope: meta.block.parameters.ruby punctuation.definition.parameters.begin.ruby
       set: block-parameters
     - match: (?=\s*[^\s\|])
       pop: true
@@ -552,8 +545,7 @@ contexts:
   block-parameters:
     - meta_content_scope: meta.block.parameters.ruby
     - match: \|
-      scope:
-        meta.block.parameters.ruby punctuation.definition.parameters.end.ruby
+      scope: meta.block.parameters.ruby punctuation.definition.parameters.end.ruby
       set: try-regex
     - match: "{{identifier}}"
       scope: variable.parameter.ruby
