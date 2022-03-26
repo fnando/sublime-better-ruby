@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-a[:foo]
-
 # @author Foo Bar
 class Sample
   # https://example.com
@@ -238,7 +236,7 @@ class Sample
   class InternalImplementation
   end
 
-  # The public REST API for http://user:pass@jbrwcky.org?a=1&a[]=%20DBC#hello asdfasdfasdf
+  # API: http://user:pass@jbrwcky.org?a=1&a[]=%20DBC#hello asdfasdfasdf
   # @version 2.0
   class JabberwockyAPI
   end
